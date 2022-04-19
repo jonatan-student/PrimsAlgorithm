@@ -12,19 +12,20 @@ public class AdjListGraph {
     }
 
     public void newEdge(Vertex f, Vertex t, int w){
-        if(! (this.vertices.contains(f) && this.vertices.contains(t))){
+        if(!(this.vertices.contains(f) && this.vertices.contains(t))){
             System.out.println("Vertex does not exist");
-        } else {
-            Edge newEdge = new Edge(f, t, w);
         }
+        Edge newEdge = new Edge(f, t, w);
+        Edge reverseEdge = new Edge(t, f, w);
     }
 
     public void printGraph(){
         for (Vertex v: this.vertices) {
-            System.out.println("the edges from vertex " + v.getName());
+            System.out.println("The connection from " + v.getName());
             for(Edge e: v.getOutEdges()){
-                System.out.println(" to " + e.getTo().getName() + " weight " + e.getWeight() + "\n");
+                System.out.println("-To " + e.getTo().getName() + " is " + e.getWeight()+"Km");
             }
+            System.out.println("\n");
         }
     }
 }
