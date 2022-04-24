@@ -4,7 +4,6 @@ import java.util.HashMap;
 public class minHeap<T extends Comparable<T> >{
     HashMap<T,Integer> positionTable=new HashMap<>();
 
-    // root is at index 0
     public ArrayList<T> minheap;
     private int size;
 
@@ -32,14 +31,14 @@ public class minHeap<T extends Comparable<T> >{
     }
 
     private void swap(int pos1, int pos2){
-        T dummy = minheap.get(pos1);
+        T placeHolder = minheap.get(pos1);
 
         minheap.set(pos1, minheap.get(pos2));
-        minheap.set(pos2,dummy);
+        minheap.set(pos2,placeHolder);
         positionTable.put(minheap.get(pos1),pos1);
         positionTable.put(minheap.get(pos2),pos2);
     }
-    public void insert(T item){ // offer
+    public void insert(T item){ 
         minheap.add(item);
         positionTable.put(item,size);
         size++;
@@ -79,13 +78,13 @@ public class minHeap<T extends Comparable<T> >{
             }
         }
     }
-    public T extractMin(){ // poll
+    public T extractMin(){
         T min = minheap.get(0);
         minheap.set(0, minheap.get(size-1));
         positionTable.put(minheap.get(0),0);
         size--;
 
-        increasekey(0); // O(n²) for bubble sort
+        increasekey(0); 
         return min;
     }
     public void printHeap()
