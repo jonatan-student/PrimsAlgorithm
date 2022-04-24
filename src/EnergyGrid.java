@@ -1,11 +1,10 @@
 public class EnergyGrid {
-
+    AdjListGraph graph = new AdjListGraph();
     public EnergyGrid(){
-        AdjListGraph Grid = new AdjListGraph();
-        fillGrid(true, Grid);
+        fillGrid(graph);
     }
 
-    public void fillGrid(Boolean go, AdjListGraph graph){
+    public void fillGrid(AdjListGraph graph){
         Vertex Eskildstrup = new Vertex("Eskildstrup"); Vertex Haslev = new Vertex("Haslev");           Vertex Holbaek = new Vertex("Holbaek");
         Vertex Jaegerspris = new Vertex("Jaegerspris"); Vertex Kalundborg = new Vertex("Kalundborg");   Vertex Korsor = new Vertex("Korsor");
         Vertex Koge = new Vertex("Koge");               Vertex Maribo = new Vertex("Maribo");           Vertex Naestved = new Vertex("Naestved");
@@ -34,4 +33,8 @@ public class EnergyGrid {
         graph.newEdge(Naestved, Soro, 32);        graph.newEdge(Naestved, Vordingborg, 28);  graph.newEdge(Ringsted, Roskilde, 31);
         graph.newEdge(Ringsted, Soro, 15);        graph.newEdge(Ringsted, Vordingborg, 58);  graph.newEdge(Slagelse, Soro, 14);
     };
+
+    public void print(){
+        graph.printGraph();
+    }
 }

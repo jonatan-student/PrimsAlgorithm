@@ -3,6 +3,14 @@ import java.util.ArrayList;
 public class AdjListGraph {
     private ArrayList<Vertex> vertices;
 
+    public ArrayList<Vertex> getVertices() {
+        return vertices;
+    }
+
+    public void setVertices(ArrayList<Vertex> vertices) {
+        this.vertices = vertices;
+    }
+
     public AdjListGraph(){
         this.vertices = new ArrayList<Vertex>();
     }
