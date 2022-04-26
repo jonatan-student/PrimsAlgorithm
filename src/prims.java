@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class prims {
     ArrayList<Vertex> MST = new ArrayList<>();
@@ -11,11 +10,7 @@ public class prims {
     public prims(AdjListGraph g){;
         this.grid = g;
         minHeap<Vertex> minheap = new minHeap<>();
-        HashMap<Vertex, Edge> TotalList = new HashMap<>();
-
-        for (Vertex v: this.grid.getVertices()){
-            minheap.insert(v);
-        }
+        for (Vertex v: this.grid.getVertices()){minheap.insert(v);}
         this.Initial = minheap.getMinHeap().get(0);
         this.Initial.setDistance(0);
         goPrim(minheap);
