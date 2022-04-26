@@ -4,16 +4,20 @@ public class prims {
     ArrayList<Vertex> MST = new ArrayList<>();
     ArrayList<Edge> NeededEdges = new ArrayList<>();
     Vertex Initial;
-    Integer TotalWeight = 0;
+    Integer TotalWeight=0;
     AdjListGraph grid;
 
     public prims(AdjListGraph g){;
         this.grid = g;
         minHeap<Vertex> minheap = new minHeap<>();
-        for (Vertex v: this.grid.getVertices()){minheap.insert(v);}
+        g.printGraph();
+        for (Vertex v: this.grid.getVertices()){
+            minheap.insert(v);
+        }
         this.Initial = minheap.getMinHeap().get(0);
         this.Initial.setDistance(0);
         goPrim(minheap);
+
     }
 
     public void goPrim(minHeap minheap){
