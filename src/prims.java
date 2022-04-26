@@ -42,7 +42,7 @@ public class prims {
             }
         }
         for(Edge e: NeededEdges){
-            System.out.println("From "+e.getFrom().getName() + " to " + e.getTo().getName() + " is a distance of: " + e.getWeight() + " km" + "\nThis will cost: " + e.getWeight() * 1000000 +"\n");
+            System.out.println("From "+e.getFrom().getName() + " to " + e.getTo().getName() + " is a distance of: " + e.getWeight() + " km" + "\nThis will cost: " + e.getWeight() * 1000000 +"kr\n");
         }
         System.out.println("Totatl distance = " + TotalWeight + "\nThis will cost " + TotalWeight * 1000000 + "kr");
     }
