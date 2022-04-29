@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-
+//class used for tools in adding the vertexes and edges to the energy grid
+//Most names are self explanatory 
 public class AdjListGraph {
     private ArrayList<Vertex> vertices;
 
@@ -72,6 +73,7 @@ class Vertex implements Comparable<Vertex>{
         this.outEdges= new ArrayList<>();
     }
 
+    
     @Override
     public int compareTo(Vertex o) {
         if(this.distance>o.distance){

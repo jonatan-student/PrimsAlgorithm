@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class prims {
+    //initialized lists and variables to be used
     ArrayList<Vertex> MST = new ArrayList<>();
     ArrayList<Edge> NeededEdges = new ArrayList<>();
     Vertex Initial;

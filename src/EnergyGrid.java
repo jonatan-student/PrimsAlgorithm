@@ -1,9 +1,10 @@
 public class EnergyGrid {
+    //Used in creating adjacency list which can hold and store the actual vertices and edges in this Grid class
     AdjListGraph graph = new AdjListGraph();
     public EnergyGrid(){
         fillGrid(graph);
     }
-
+    //filling in the energyGrid with needed information 
     public void fillGrid(AdjListGraph graph){
         Vertex Eskildstrup = new Vertex("Eskildstrup"); Vertex Haslev = new Vertex("Haslev");           Vertex Holbaek = new Vertex("Holbaek");
         Vertex Jaegerspris = new Vertex("Jaegerspris"); Vertex Kalundborg = new Vertex("Kalundborg");   Vertex Korsor = new Vertex("Korsor");
@@ -33,7 +34,7 @@ public class EnergyGrid {
         graph.newEdge(Naestved, Soro, 32);        graph.newEdge(Naestved, Vordingborg, 28);  graph.newEdge(Ringsted, Roskilde, 31);
         graph.newEdge(Ringsted, Soro, 15);        graph.newEdge(Ringsted, Vordingborg, 58);  graph.newEdge(Slagelse, Soro, 14);
     };
-
+    //print 
     public void print(){
         graph.printGraph();
     }

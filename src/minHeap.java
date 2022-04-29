@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-
+//Tools for 
 public class minHeap<T extends Comparable<T> >{
     HashMap<T,Integer> positionTable=new HashMap<>();
 
